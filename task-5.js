@@ -1,10 +1,9 @@
-const inputName = document.querySelector('input#name-input');
-const spanOutput = document.querySelector('span#name-output');
+const addName = document.getElementById("name-input");
+const newName = document.getElementById("name-output");
 
-inputName.addEventListener('input', onInputChange);
-
-function onInputChange(event) {
-  spanOutput.textContent = event.currentTarget.value
-    ? event.currentTarget.value
-    : 'незнакомец';
-}
+const templateName = newName.textContent;
+addName.addEventListener("input", handelInput);
+function handelInput(elm) {
+  newName.textContent =
+    elm.target.value !== "" ? elm.target.value : templateName;
+}і
