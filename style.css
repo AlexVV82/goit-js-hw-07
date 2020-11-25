@@ -1,0 +1,33 @@
+.gallery {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  margin: 20px;
+}
+
+.gallery-item {
+  width: 350px;
+  height: 200px;
+}
+
+.gallery-img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+}
+  
+  .validation-input {
+    width: 200px;
+    height: 25px;
+    border: 6px solid #bdbdbd;
+  }
+  
+  .validation-input.valid {
+    border: 6px solid #4caf50;
+  }
+  
+  .validation-input.invalid {
+    border: 6px solid #f44336;
+  }
+  
