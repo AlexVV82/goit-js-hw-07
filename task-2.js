@@ -7,15 +7,14 @@ const ingredients = [
   "Приправы",
 ];
 
-// 1 method кращий  //
-
-const ingList = document.getElementById("ingredients");
-
-const ingredientsItems = (el) => {
-  const itemRef = document.createElement("li");
-  itemRef.textContent = el;
-  return itemRef;
+const listEl = document.querySelector("#ingredients");
+const makeListItems = (ingredients) => {
+  return ingredients.map((ingredient) => {
+    const listItemEl = document.createElement("li");
+    listItemEl.textContent = ingredient;
+    return listItemEl;
+  });
 };
 
-const list = ingredients.map((item) => ingredientsItems(item));
-ingList.append(...list);
+const items = makeListItems(ingredients);
+listEl.append(...items);
