@@ -1,14 +1,19 @@
-const ingredients = ["Картошка", "Грибы", "Чеснок", "Помидоры", "Зелень", "Приправы"];
+const ingredients = [
+  "Картошка",
+  "Грибы",
+  "Чеснок",
+  "Помидоры",
+  "Зелень",
+  "Приправы",
+];
 
-const listEl = document.querySelector("#ingredients");
-//через ф-цию
-const makeListItems = (ingredients) => {
-  return ingredients.map((ingredient) => {
-    const listItemEl = document.createElement("li");
-    listItemEl.textContent = ingredient;
-    return listItemEl;
-  });
+const ingList = document.getElementById("ingredients");
+
+const ingredientsItems = (el) => {
+  const itemRef = document.createElement("li");
+  itemRef.textContent = el;
+  return itemRef;
 };
 
-const items = makeListItems(ingredients);
-listEl.append(...items);
+const list = ingredients.map((item) => ingredientsItems(item));
+ingList.append(...list);
